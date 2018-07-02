@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block titulo %}Alunos Gestão de Obras{% endblock %}
+
+{% block conteudo %} 
+
+
+      <legend>Aluno Gestão de Obras</legend>
+
+        <div class="row">
+         
+          <div class="col-md-4">
+            <div class="input-group">
+                <span class="input-group-btn">
+             
+             
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+          <br>
+            <div class="panel panel-primary">
+              <!-- Default panel contents -->
+              <div class="panel-heading">Aluno </div>
+             
+              <!-- Table -->
+              <table class="table">
+                  <tr>
+                    <th>Matricula</th>
+                    <th>Nome</th>
+                    <th>Curso</th>
+                   
+                    <th>Nota Matemática</th>
+                  </tr>
+                
+                    {%for aluno_go in alunos_go%}   <!-- Cada objeto de alunos_go será a variavel aluno_go -->
+                    {%if aluno_go.matricula == id%}
+                    <td>{{aluno_go.matricula}}</td>
+                    <td>{{aluno_go}}</td>
+                    <td>{{aluno_go.curso}}</td> 
+                    <td >{{aluno_go.nota_mat}}</td>             
+                   </tr>
+                   {%endif%}
+                  {% endfor %}
+              </table>
+            </div>
+
+
+          </div>
+        </div>
+
+{% endblock %}

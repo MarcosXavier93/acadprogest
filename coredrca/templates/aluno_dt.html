@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block titulo %}Alunos Desenho Tecnico{% endblock %}
+
+{% block conteudo %} 
+
+
+      <legend>Alunos</legend>
+
+        <div class="row">
+         
+          <div class="col-md-4">
+            <div class="input-group">
+                <span class="input-group-btn">
+             
+             
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+          <br>
+            <div class="panel panel-primary">
+              <!-- Default panel contents -->
+              <div class="panel-heading">Alunos</div>
+
+              <!-- Table -->
+              <table class="table">
+                  <tr>
+                    <th>Matricula</th>
+                    <th>Nome</th>
+                    <th>Curso</th>
+                   
+                    <th>nota matematica</th>
+
+                  </tr>
+                  {%for aluno in alunos%}
+                  <tr>
+                    <td>{{aluno.matricula}}</td>
+                    <td>{{aluno}}</td>
+                    <td>{{aluno.curso}}</td> 
+                    <td >{{aluno.nota_mat}}</td>             
+                  </tr>
+                  {% endfor %}
+              </table>
+            </div>
+
+
+          </div>
+        </div>
+
+{% endblock %}

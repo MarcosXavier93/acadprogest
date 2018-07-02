@@ -1,0 +1,50 @@
+.staff-footer {
+	  border-top: 1px solid rgb(61, 4, 216);
+background-image: linear-gradient(to top, rgba(2, 1, 73, 0), 	#808080);
+font-size: 30px;
+margin-top: 40px;
+text-align: right;
+}
+
+.staff-aling-rigth{
+	float: right;
+	margin-top: 20px;
+	font-size: 11px;
+}
+.staff-nav{
+	  background-color:rgba(4, 216, 4, 0);
+  background-image: linear-gradient(to bottom, transparent, rgb(61, 4, 216));
+}
+
+/*print CSS*/
+
+@media print {
+
+    * { 
+        background: transparent !important; 
+        color: rgb(61, 4, 216) !important; 
+        text-shadow: none !important; 
+        filter:none !important; 
+        -ms-filter: none !important; 
+    } 
+
+    @page {
+        margin: 4.5cm;
+    }
+
+    .wrap { 
+        width: 100%; 
+        margin: 0; 
+        float: none !important; 
+    }
+
+    .no-print, nav, footer, video, audio, object, embed { 
+        display:none; 
+    }
+
+    .print {
+        display: block;
+    }
+
+   
+}
